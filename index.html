@@ -1,33 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | NFT preview card component</title>
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+        <title>Frontend Mentor | NFT preview card component</title>
 
-  Equilibrium #3429
+        <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+        <style>
+            .attribution {
+                font-size: 11px;
+                text-align: center;
+            }
+            .attribution a {
+                color: hsl(228, 45%, 44%);
+            }
+        </style>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <main>
+            <section>
+                <div class="nft">
+                    <img src="images/image-equilibrium.jpg" alt="nft" />
+                </div>
 
-  Our Equilibrium collection promotes balance and calm.
+                <header><h1><a href="#3429">Equilibrium #3429</a></h1></header>
 
-  0.041 ETH
-  3 days left
-  
-  Creation of Jules Wyvern
+                <p class="desc">
+                    Our Equilibrium collection promotes balance and calm.
+                </p>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+                <div class="stats">
+                    <div class="left">0.041 ETH</div>
+                    <div class="right">3 days left</div>
+                </div>
+
+                <div class="owner">
+                    <p>Creation of <a href="#owner">Jules Wyvern</a></p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="attribution">
+                Challenge by
+                <a
+                    href="https://www.frontendmentor.io?ref=challenge"
+                    target="_blank"
+                    >Frontend Mentor</a
+                >. Coded by <a href="https://www.github.com/hisham3243">Hisham S.</a>.
+            </div>
+        </footer>
+    </body>
 </html>

@@ -1,1 +1,203 @@
-*{margin:0}
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+:root {
+    /* ### Primary */
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+
+    /* ### Neutral */
+    --Very-dark-blue--main-BG: hsl(217, 54%, 11%);
+    --Very-dark-blue--card-BG: hsl(216, 50%, 16%);
+    --Very-dark-blue--line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    background-color: var(--Very-dark-blue--main-BG);
+    font-family: "Outfit", sans-serif;
+}
+
+.desc,
+.right,
+.owner {
+    font-weight: 300;
+    color: var(--Soft-blue);
+}
+
+h1 {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+a {
+    color: var(--White);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--Cyan, cyan);
+}
+
+.left {
+    font-weight: 400;
+    color: var(--Cyan, cyan);
+    padding-left: 15px;
+}
+
+main {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+main section {
+    min-width: min-content;
+    max-width: 340px;
+    background-color: var(--Very-dark-blue--card-BG);
+    margin: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+main section .nft {
+    max-height: 300px;
+    margin-bottom: 30px;
+}
+
+main section .nft img {
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+main section .nft::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    z-index: 500;
+    background-image: url(images/icon-view.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+main section .nft::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 400;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    opacity: 0.5;
+    background-color: var(--Cyan);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+main section .nft::after,
+main section .nft::before {
+    visibility: hidden;
+}
+
+main section .nft:hover::after,
+main section .nft:hover::before {
+    visibility: visible;
+    cursor: pointer;
+}
+
+main section .desc {
+    line-height: 1.5;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+main section .stats {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+main section .stats div::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 0px;
+    left: 0px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+main section .stats div:first-child::before {
+    background-image: url(images/icon-ethereum.svg);
+}
+
+main section .stats div:last-child::before {
+    background-image: url(images/icon-clock.svg);
+    left: -20px;
+}
+
+main section .owner {
+    margin: 40px 0 10px 45px;
+}
+
+main section .owner::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    top: -7.5px;
+    left: -45px;
+    background-image: url(images/image-avatar.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 1px solid var(--White);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+main section .stats::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -20px;
+    left: 0px;
+    background-color: var(--Very-dark-blue--line);
+}
