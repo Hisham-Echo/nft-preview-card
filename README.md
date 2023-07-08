@@ -96,4 +96,4 @@ This challenge is completely free. Please share it with anyone who will find it 
 https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U/hub
 
 **Live-Preview**
-https://hisham3243.github.io/nft-preview-card/
+https://hisham-echo.github.io/nft-preview-card/
